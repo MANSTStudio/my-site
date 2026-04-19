@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الدليل الكامل لكشف المواقع الاحتيالية </title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-bg: #0d0f14;
+            --cyber-blue: #ffffff;
+            --danger-red: #ff0000;
+            --text-gray: #b0b3b8;
+            --glass-card: rgba(17, 25, 40, 0.75);
+        }
+
+        body {
+            margin: 0; padding: 0;
+            font-family: 'Cairo', sans-serif;
+            background: var(--dark-bg);
+            color: white;
+            line-height: 1.8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 60px 20px;
+        }
+
+        .bg-layer {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            z-index: -1;
+            background: linear-gradient(135deg, #0d0f14 0%, #1a1c2c 100%);
+        }
+
+        .matrix-rain {
+            position: absolute;
+            color: var(--cyber-blue);
+            font-size: 14px;
+            pointer-events: none;
+            opacity: 0.15;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            to { transform: translateY(110vh); }
+        }
+
+        .main-content {
+            width: 95%;
+            max-width: 900px;
+            background: var(--glass-card);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            padding: 50px;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            color: var(--cyber-blue);
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: 900;
+            text-shadow: 0 0 20px rgba(0, 229, 255, 0.3);
+        }
+
+        .intro-text {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            margin-bottom: 50px;
+        }
+
+        .topic-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: var(--cyber-blue);
+            margin-top: 40px;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .topic-header i { font-style: normal; font-size: 2rem; color: var(--danger-red); }
+
+        .explanation-card {
+            background: rgba(255, 255, 255, 0.02);
+            border-right: 4px solid var(--cyber-blue);
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 0 15px 15px 0;
+            transition: 0.3s;
+        }
+
+        .explanation-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            transform: translateX(-5px);
+        }
+
+        .explanation-card b { color: #fff; }
+
+        .pro-tip {
+            background: rgba(255, 61, 0, 0.1);
+            border: 1px solid var(--danger-red);
+            padding: 15px 25px;
+            border-radius: 12px;
+            margin: 20px 0;
+            color: #ff9e80;
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 50px;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            opacity: 0.6;
+        }
+
+    </style>
+</head>
+<body>
+
+    <audio id="ggSound" src="GG.mp3"></audio>
+
+    <div class="bg-layer" id="matrix"></div>
+
+    <div class="main-content">
+        <h1>كشف زيف المواقع: الدليل العميق </h1>
+        
+        <p class="intro-text">
+            الإنترنت مكان موحش إذا كنت لا تملك الأدوات الصحيحة. إليك شرح مفصل  لتفكيك أي موقع مشبوه ومعرفة حقيقته قبل أن تضغط على أي زر.
+        </p>
+
+        <div class="topic-header"><i>01</i> فخ النطاقات المتشابهة (Domain Typosquatting)</div>
+        <div class="explanation-card">
+            المهاجم يعتمد على "سرعة عينك". يقوم بحجز نطاق يشبه النطاق الأصلي بفارق حرف واحد. 
+            <br><b>مثال:</b> استخدام <code>g00gle.com</code> بدلاً من <code>google.com</code>. دائماً راجع الحروف بدقة.
+        </div>
+
+        <div class="topic-header"><i>02</i> خديعة شهادة SSL (القفل الأخضر المزيف)</div>
+        <div class="explanation-card">
+            القفل يعني "تشفير" البيانات وليس "صدق" الموقع. الهكرز يستخدمون شهادات مجانية مثل Let's Encrypt لإيهام الضحية بالأمان.
+        </div>
+
+        <div class="topic-header"><i>03</i> فحص عمر النطاق (WHOIS Lookup)</div>
+        <div class="explanation-card">
+            المواقع الاحتيالية لها عمر قصير. إذا كان عمر الموقع أقل من 6 أشهر ويدعي أنه "شركة عالمية" فهو كاذب حتماً.
+        </div>
+
+        <div class="pro-tip">💡 نصيحة: المواقع الرسمية تُسجل لسنوات طويلة، المواقع النصابة تُسجل لسنة واحدة فقط.</div>
+
+        <div class="topic-header"><i>04</i> الهندسة الاجتماعية واستعجال الضحية</div>
+        <div class="explanation-card">
+            استخدام أسلوب "العرض سينتهي الآن" أو "حسابك سيغلق" لجعلك تتصرف بعاطفة بدلاً من منطق وتحليل.
+        </div>
+
+        <div class="topic-header"><i>05</i> تحليل الروابط الداخلية (Dead Links)</div>
+        <div class="explanation-card">
+            في المواقع النصابة، الأزرار مثل "Privacy Policy" أو "Terms" غالباً لا تعمل أو تعيد توجيهك لنفس الصفحة.
+        </div>
+
+        <div class="topic-header"><i>06</i> النوافذ المنبثقة العشوائية (Pop-ups)</div>
+        <div class="explanation-card">
+            ظهور رسائل تخبرك بفوزك بجائزة أو إصابة جهازك بفيروس بمجرد الدخول هو علامة اختراق وشيك.
+        </div>
+
+        <div class="topic-header"><i>07</i> فحص روابط التحميل (URL Inspection)</div>
+        <div class="explanation-card">
+            قبل الضغط، مرر الماوس فوق الرابط وانظر أسفل المتصفح. إذا كان النص المكتوب يختلف عن الرابط الحقيقي الوجهة، فهذا فخ.
+        </div>
+
+        <div class="topic-header"><i>08</i> لغة الموقع والأخطاء الإملائية</div>
+        <div class="explanation-card">
+            الشركات الكبرى لديها مدققون لغويون. الأخطاء الإملائية الفادحة في رسائل البنوك أو المواقع الرسمية تدل على أنها "شغل هواة" نصب.
+        </div>
+
+        <div class="topic-header"><i>09</i> طلب بيانات غير منطقية</div>
+        <div class="explanation-card">
+            موقع يطلب "كلمة سر الإيميل" أو "رقم البطاقة" في صفحة لا تستدعي ذلك (مثل صفحة قراءة مقال أو تحميل صورة).
+        </div>
+
+        <div class="topic-header"><i>10</i> غياب معلومات الاتصال الحقيقية</div>
+        <div class="explanation-card">
+            المواقع الموثوقة تضع عنواناً فيزيائياً، رقم هاتف، وإيميل رسمي (info@company.com) وليس إيميل Gmail عشوائي.
+        </div>
+
+        <div class="topic-header"><i>11</i> بروتوكولات الدفع المشبوهة</div>
+        <div class="explanation-card">
+            إذا طلب الموقع الدفع عبر "العملات الرقمية" فقط أو "بطاقات الهدايا" أو "تحويل ويسترن يونيون"، فاعلم أنك لن تسترد حقك أبداً.
+        </div>
+
+        <div class="topic-header"><i>12</i> استخدام برامج فحص الروابط (Sandboxing)</div>
+        <div class="explanation-card">
+            استخدام أدوات مثل <b>VirusTotal</b> أو <b>Browserling</b> لفتح الرابط في بيئة معزولة قبل فتحه في جهازك الشخصي.
+        </div>
+
+        <div class="topic-header"><i>13</i> فحص ملفات التعريف (Cookies) الغريبة</div>
+        <div class="explanation-card">
+            بعض المواقع تزرع ملفات تتبع خبيثة بمجرد الدخول لمراقبة نشاطك في التبويبات الأخرى (Session Hijacking).
+        </div>
+
+        <div class="topic-header"><i>14</i> شكل التصميم (UI/UX) المسروق</div>
+        <div class="explanation-card">
+            المواقع النصابة تنسخ تصميم مواقع شهيرة. دقق في جودة الصور؛ إذا كانت مشوشة (Pixelated)، فهي غالباً مسروقة سكرين شوت.
+        </div>
+
+        <div class="topic-header"><i>15</i> التحقق من القوائم السوداء (Blacklists)</div>
+        <div class="explanation-card">
+            استخدام محركات بحث مثل Google Safe Browsing للتأكد من أن الموقع لم يتم التبليغ عنه مسبقاً كموقع تصيد (Phishing).
+        </div>
+    </div>
+
+    <footer>تم إعداد هذا الدليل لأغراض تعليمية - 2026 - احم احم تراني كذاب بس عشان اقعد اسبوع اقول لي عايشه . عاشه ولا ميته هههههههههههههههههههههههههههههههههه</footer>
+
+    <script>
+        // تشغيل صوت الـ GG عند التحميل
+        window.addEventListener('load', () => {
+            const audio = document.getElementById('ggSound');
+            audio.play().catch(error => {
+                console.log("الأتوبلاي ممنوع، بشتغل عند أول كليك!");
+                document.body.addEventListener('click', () => {
+                    audio.play();
+                }, { once: true });
+            });
+        });
+
+        const bg = document.getElementById('matrix');
+        const chars = ['0', '1', '{', '}', '[', ']', '<', '>', '/', '!', '#', '$'];
+
+        function createMatrixBit() {
+            const bit = document.createElement('div');
+            bit.className = 'matrix-rain';
+            bit.innerHTML = chars[Math.floor(Math.random() * chars.length)];
+            bit.style.left = Math.random() * 100 + 'vw';
+            bit.style.animationDuration = (Math.random() * 3 + 2) + 's';
+            bit.style.fontSize = (Math.random() * 10 + 10) + 'px';
+            bg.appendChild(bit);
+            setTimeout(() => bit.remove(), 5000);
+        }
+        setInterval(createMatrixBit, 150);
+    </script>
+</body>
+</html>
